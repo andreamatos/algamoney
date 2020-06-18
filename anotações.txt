@@ -1,0 +1,74 @@
+9.16. Adicionando estilos CSS em componentes
+---------------------------------------------------------------------
+Instalar 
+nodejs.org - baixar e instalar
+npm install -g @angular/cli no prompt
+---------------------------------------------------------------------
+criar novo projeto - ng new aula9.6
+---------------------------------------------------------------------
+criar componente bem-vindo, 
+bem-vindo.component.css
+bem-vindo.component.hmtl
+bem-vindo.component.ts
+
+comando: ng g c bem-vindo
+---------------------------------------------------------------------
+netstat -a -n -o | findstr :4200 - pesquisar o numero do processo do ip
+taskKill.exe /F /PID 6676        - matar processo do ip
+---------------------------------------------------------------------
+npm - geranciador de pacotes do angular
+instalar bootstrap
+npm install bootstrap --save (salva em package.jason - dependencias)
+no arquivo angular.json em styles, incluir
+"node_modules/bootstrap/dist/css/bootstrap.css"
+---------------------------------------------------------------------
+para utilizar diretivas - app.module.ts
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { AppComponent } from './app.component';
+
+@NgModule({
+  declarations: [
+    AppComponent
+  ],
+  imports: [
+    BrowserModule,
+    FormsModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+---------------------------------------------------------------------
+verificar projetos
+npm install -g tslint typescript
+entrar no projeto e executar o comando: ng lint
+---------------------------------------------------------------------
+plugin tslint
+verificar boas praticas no projeto
+---------------------------------------------------------------------
+plugin EditorConfig for VS Code
+verificar padrao de desenvolvimento
+leva em consideracao a configuracao que esta
+no arquivo .editorconfig
+---------------------------------------------------------------------
+plugin Html Snippets
+auxilia na digitacao de comandos html
+---------------------------------------------------------------------
+plugin Auto Import
+import de components automaticamente
+na frente do componente ctrl + espaco + enter -> importa os components
+---------------------------------------------------------------------
+Escolher biblioteca de componentes
+https://material.angular.io -> desenvolvido pelos criados do angular
+http://angular2-materialize.surg.sh -> baseada no css
+https://ng-bootstrap.github.io -> baseada no bootstrap
+
+Vamos usar esta dependencia;
+https://www.primefaces.org/primeng -> é a mais completa, tem muitos componentes, 
+interface parecida com primefaces
+npm install primeng --save 
+
+instalar fontwesome.io
+eh uma dependencia do primeng
