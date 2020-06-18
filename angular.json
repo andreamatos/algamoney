@@ -122,6 +122,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "algamoney"
+    }
+  },
+  "defaultProject": "algamoney",
+  "cli": {
+    "analytics": false
+  }
 }
